@@ -5,9 +5,9 @@
     <dmn:extensionElements/>
     <dmn:variable id="_3DAB64BD-FC1F-48D3-96EC-E9E994DFABF0" name="age" typeRef="number"/>
   </dmn:inputData>
-  <dmn:decision id="_1A56E896-3422-4754-9459-B8EA80117848" name="isAdult">
+  <dmn:decision id="_1A56E896-3422-4754-9459-B8EA80117848" name="canVote">
     <dmn:extensionElements/>
-    <dmn:variable id="_9E58BE7A-75C9-4797-8616-4AE7014450FB" name="isAdult" typeRef="boolean"/>
+    <dmn:variable id="_9E58BE7A-75C9-4797-8616-4AE7014450FB" name="canVote" typeRef="boolean"/>
     <dmn:informationRequirement id="_1E702F84-E2CF-4A9C-8E82-886A5B4D56CA">
       <dmn:requiredInput href="#_917A829B-E251-486F-8EF1-02815C5AC869"/>
     </dmn:informationRequirement>
