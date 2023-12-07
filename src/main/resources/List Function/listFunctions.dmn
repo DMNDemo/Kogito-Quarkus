@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_4DC2605D-46F4-4344-A2E8-B498335FB568" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_FC41B11B-FEDA-4783-9103-613BA3FCEB9B" name="listFunctions" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_4DC2605D-46F4-4344-A2E8-B498335FB568">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_19D31DEA-FC74-47C0-81C7-061E43560600" name="empNameList" isCollection="true">
+    <dmn:typeRef>string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_E31829AB-0D60-4B8C-9526-A62C6902A8AE" name="empSalaryList" isCollection="true">
+    <dmn:typeRef>number</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_B0CF2F77-B081-44DE-9EC2-CB66293EED61" name="resultList" isCollection="true">
+    <dmn:typeRef>Any</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_B1F9385C-3C4A-45F2-86A7-06BF9ED1F0D1" name="Names">
+    <dmn:extensionElements/>
+    <dmn:variable id="_131A7B0C-5449-4ACD-B2A0-8F25AC737F24" name="Names" typeRef="empNameList"/>
+  </dmn:inputData>
+  <dmn:decision id="_400FC841-1939-4E41-B43B-EB90188BD8AA" name="Decision">
+    <dmn:extensionElements/>
+    <dmn:variable id="_CF56EDC6-8F07-43D1-B2ED-41F53029A6A9" name="Decision" typeRef="resultList"/>
+    <dmn:informationRequirement id="_50E89ED0-96EF-44A3-B210-44BE4B3389CE">
+      <dmn:requiredInput href="#_B1F9385C-3C4A-45F2-86A7-06BF9ED1F0D1"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_BDDF80C8-128E-4E3E-BEB2-141F116CCD81">
+      <dmn:requiredInput href="#_A48AB8F2-A49B-4F8D-A3F0-0517987470BF"/>
+    </dmn:informationRequirement>
+    <dmn:context id="_9A08F57D-D50F-451A-9E77-BE915AAAE0ED">
+      <dmn:contextEntry>
+        <dmn:variable id="_737511A0-6F37-49D0-9AD2-327775B5E2F4" name="listContains" typeRef="boolean"/>
+        <dmn:literalExpression id="_109A6A6D-8A13-4A50-A485-91715C1A9FFF">
+          <dmn:text>list contains(Names,"amit")</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_26C2E675-CAF3-4B89-8EC1-C756C75761E2" name="countEmployees" typeRef="number"/>
+        <dmn:literalExpression id="_FF3347DF-8B96-4648-A264-58AB45E02B70">
+          <dmn:text>count(Names)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_08E250A2-9A29-4FAC-9DE6-7CCAFEA7EDE9" name="minimumSal" typeRef="number"/>
+        <dmn:literalExpression id="_9DD9D96E-7BD0-4572-A1B3-9AD008CD7A66">
+          <dmn:text>min(Salaries)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_F3382496-2B39-4F8A-962B-2AB60472380F" name="maximum sal" typeRef="number"/>
+        <dmn:literalExpression id="_0B1EAAC2-5ACA-4262-B598-0A6AA84CC614">
+          <dmn:text>max(Salaries)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_71AD20A9-74EC-431A-917A-8180070E07A3" name="sum of salaries" typeRef="number"/>
+        <dmn:literalExpression id="_100B67A3-E2AE-481A-9EA9-56B94119E600">
+          <dmn:text>sum(Salaries)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_2912E6FD-F298-4967-B0CB-5FD3B4139431" name="mean of salaries" typeRef="number"/>
+        <dmn:literalExpression id="_87626F94-A907-4210-9103-A4A7B79CEF56">
+          <dmn:text>mean(Salaries)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:literalExpression id="_A2F78C9B-2D43-4CAE-8ABA-5641C8C58F3C">
+          <dmn:text/>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+  <dmn:inputData id="_A48AB8F2-A49B-4F8D-A3F0-0517987470BF" name="Salaries">
+    <dmn:extensionElements/>
+    <dmn:variable id="_D3AAED9F-1F98-47B4-BD87-133FCDC716B7" name="Salaries" typeRef="empSalaryList"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_2930C091-8391-4DB3-8174-095E6C2B8B4F" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_9A08F57D-D50F-451A-9E77-BE915AAAE0ED">
+            <kie:width>50</kie:width>
+            <kie:width>154</kie:width>
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_109A6A6D-8A13-4A50-A485-91715C1A9FFF">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_FF3347DF-8B96-4648-A264-58AB45E02B70">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9DD9D96E-7BD0-4572-A1B3-9AD008CD7A66">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_0B1EAAC2-5ACA-4262-B598-0A6AA84CC614">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_100B67A3-E2AE-481A-9EA9-56B94119E600">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_87626F94-A907-4210-9103-A4A7B79CEF56">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A2F78C9B-2D43-4CAE-8ABA-5641C8C58F3C">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_B1F9385C-3C4A-45F2-86A7-06BF9ED1F0D1" dmnElementRef="_B1F9385C-3C4A-45F2-86A7-06BF9ED1F0D1" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="382" y="329" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_400FC841-1939-4E41-B43B-EB90188BD8AA" dmnElementRef="_400FC841-1939-4E41-B43B-EB90188BD8AA" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="307" y="184" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_A48AB8F2-A49B-4F8D-A3F0-0517987470BF" dmnElementRef="_A48AB8F2-A49B-4F8D-A3F0-0517987470BF" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="195" y="329" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_50E89ED0-96EF-44A3-B210-44BE4B3389CE" dmnElementRef="_50E89ED0-96EF-44A3-B210-44BE4B3389CE">
+        <di:waypoint x="432" y="354"/>
+        <di:waypoint x="357" y="209"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_BDDF80C8-128E-4E3E-BEB2-141F116CCD81" dmnElementRef="_BDDF80C8-128E-4E3E-BEB2-141F116CCD81">
+        <di:waypoint x="245" y="354"/>
+        <di:waypoint x="357" y="209"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
