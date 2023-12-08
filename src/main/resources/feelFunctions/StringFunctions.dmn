@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_762F513E-30D1-4C2C-9606-750A6FA780C0" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_3A1F904B-910B-46C8-BE8D-D4614A8F7463" name="StringFunctions" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_762F513E-30D1-4C2C-9606-750A6FA780C0">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_D6115EF3-81CD-4721-BF32-EEE85AAE74C8" name="list" isCollection="true">
+    <dmn:typeRef>Any</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_3BCD042E-6ABF-4FFD-A028-2BE385E101EE" name="name">
+    <dmn:extensionElements/>
+    <dmn:variable id="_134BB4B6-89EA-4201-A2B7-A9AB663CC85B" name="name" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:decision id="_2BD90831-5906-404D-A41D-BE7914A15CE1" name="Decision">
+    <dmn:extensionElements/>
+    <dmn:variable id="_78A567D1-ED3A-449F-8CD4-06E577BCE11B" name="Decision" typeRef="boolean"/>
+    <dmn:informationRequirement id="_01D039F6-A060-461C-8B09-445B303C047D">
+      <dmn:requiredInput href="#_3BCD042E-6ABF-4FFD-A028-2BE385E101EE"/>
+    </dmn:informationRequirement>
+    <dmn:context id="_EAB743AA-C2AF-4711-B761-BE7F8C31F269">
+      <dmn:contextEntry>
+        <dmn:variable id="_E9D800CF-3956-47DD-99FF-DEF53BDD3824" name="toUpperCase" typeRef="string"/>
+        <dmn:literalExpression id="_70B33A9F-ABFF-465D-B502-2BD5B19A8729">
+          <dmn:text>upper case(name)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_32D5F63A-CDA4-4977-AD85-CF62536822E3" name="toLowerCase" typeRef="string"/>
+        <dmn:literalExpression id="_6C28C93C-C271-466B-826B-FD21BA7753D0">
+          <dmn:text>lower case(name)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_B88CF7EC-4E4D-4282-B374-650B18CC340E" name="getSubString1" typeRef="string"/>
+        <dmn:literalExpression id="_5867B3EF-A1A5-4DCB-B4C6-92429713DB81">
+          <dmn:text>substring(name, 2)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_5AD55328-B3B5-4287-A887-04CD306A7830" name="getSubString2" typeRef="string"/>
+        <dmn:literalExpression id="_485F9A23-DA8B-4946-9C64-688DE5B7C884">
+          <dmn:text>substring(name,1 , 4)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_00E0E67E-7052-4D71-8598-3BF7F1C57DEC" name="getStringLength" typeRef="number"/>
+        <dmn:literalExpression id="_EB04B15A-D103-4E5D-8693-0A647A52AAC8">
+          <dmn:text>string length(name)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_8D2DFC4F-58C7-478A-9801-58EC07B0F118" name="stringBefore" typeRef="string"/>
+        <dmn:literalExpression id="_7CB7C2C0-376F-4091-A48B-D7C3A4A049FC">
+          <dmn:text>substring before(name, "a")</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_5DAB736B-4D77-43E6-B17C-1232805F2741" name="stringAfter" typeRef="string"/>
+        <dmn:literalExpression id="_7C35A7C7-65F0-46A1-8B45-04F53FA08891">
+          <dmn:text>substring after(name, "b")</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_27587BD4-E0A0-47A3-861D-8B84C0799205" name="stringReplace" typeRef="string"/>
+        <dmn:literalExpression id="_8F603820-BB47-4138-884D-9C2308FF9287">
+          <dmn:text>replace(name,"a" ,"b" )</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_1FA18F4F-69BE-4A80-8B80-03CEE633B9B7" name="stringContains" typeRef="string"/>
+        <dmn:literalExpression id="_D380F82F-0DA6-458E-A267-76DBE8C70BC7">
+          <dmn:text>contains(name,"amit" )</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_5C1F03F1-C056-4154-9DAE-10CADF7CACB4" name="startStartWith" typeRef="string"/>
+        <dmn:literalExpression id="_9C7F4026-C1AE-4330-83B0-75A2EB570109">
+          <dmn:text>starts with(name, "abc")</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_C473A44D-57A9-4BB2-A562-B6A36201D04E" name="stringEndsWith" typeRef="string"/>
+        <dmn:literalExpression id="_0B9CE18C-75F8-40C6-AC15-B2B8C437F65F">
+          <dmn:text>ends with(name, "abc")</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_C4EEF0FC-1A9C-4BD8-8495-5634987BFC19" name="stringSplit" typeRef="string"/>
+        <dmn:literalExpression id="_30099BDE-818A-41D0-9FB2-EA3C7F1C5BFB">
+          <dmn:text>split(name, ",")</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_2F997FD0-A106-44F1-87DC-4BB38BEE394E" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_EAB743AA-C2AF-4711-B761-BE7F8C31F269">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_70B33A9F-ABFF-465D-B502-2BD5B19A8729">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_6C28C93C-C271-466B-826B-FD21BA7753D0">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5867B3EF-A1A5-4DCB-B4C6-92429713DB81">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_485F9A23-DA8B-4946-9C64-688DE5B7C884">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_EB04B15A-D103-4E5D-8693-0A647A52AAC8">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_7CB7C2C0-376F-4091-A48B-D7C3A4A049FC">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_7C35A7C7-65F0-46A1-8B45-04F53FA08891">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_8F603820-BB47-4138-884D-9C2308FF9287">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_D380F82F-0DA6-458E-A267-76DBE8C70BC7">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9C7F4026-C1AE-4330-83B0-75A2EB570109">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_0B9CE18C-75F8-40C6-AC15-B2B8C437F65F">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_30099BDE-818A-41D0-9FB2-EA3C7F1C5BFB">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_3BCD042E-6ABF-4FFD-A028-2BE385E101EE" dmnElementRef="_3BCD042E-6ABF-4FFD-A028-2BE385E101EE" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="338" y="359" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_2BD90831-5906-404D-A41D-BE7914A15CE1" dmnElementRef="_2BD90831-5906-404D-A41D-BE7914A15CE1" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="338" y="256" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_01D039F6-A060-461C-8B09-445B303C047D" dmnElementRef="_01D039F6-A060-461C-8B09-445B303C047D">
+        <di:waypoint x="388" y="384"/>
+        <di:waypoint x="388" y="281"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>

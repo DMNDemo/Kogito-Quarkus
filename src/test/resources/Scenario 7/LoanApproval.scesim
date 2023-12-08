@@ -51,7 +51,7 @@
           <factAlias>Age</factAlias>
           <expressionAlias>value</expressionAlias>
           <genericTypes/>
-          <columnWidth>187</columnWidth>
+          <columnWidth>179</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
         <FactMapping>
@@ -72,7 +72,7 @@
           <factAlias>CreditRating</factAlias>
           <expressionAlias>value</expressionAlias>
           <genericTypes/>
-          <columnWidth>187</columnWidth>
+          <columnWidth>179</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
         <FactMapping>
@@ -93,7 +93,7 @@
           <factAlias>FinalDecision</factAlias>
           <expressionAlias>value</expressionAlias>
           <genericTypes/>
-          <columnWidth>187</columnWidth>
+          <columnWidth>179</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
       </factMappings>
