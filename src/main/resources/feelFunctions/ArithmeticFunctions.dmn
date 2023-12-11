@@ -75,19 +75,19 @@
             <dmn:contextEntry>
               <dmn:variable id="_B44CB8FD-8EC3-4825-BB90-E950E583CD9C" name="decimal" typeRef="number"/>
               <dmn:literalExpression id="_B2C4839C-5ED6-421D-8A3F-3F0156AF1882">
-                <dmn:text>decimal(1/3, 2)</dmn:text>
+                <dmn:text>decimal(n1/n2, 2)</dmn:text>
               </dmn:literalExpression>
             </dmn:contextEntry>
             <dmn:contextEntry>
               <dmn:variable id="_4F30B009-2A8C-487D-840C-D94CC6AD7430" name="floor" typeRef="number"/>
               <dmn:literalExpression id="_523245DC-9C97-4371-B936-A7063CD04895">
-                <dmn:text>floor(-1.56,1)</dmn:text>
+                <dmn:text>floor(-n1/n2,1)</dmn:text>
               </dmn:literalExpression>
             </dmn:contextEntry>
             <dmn:contextEntry>
               <dmn:variable id="_96CB0307-2798-4849-8FE0-755A0BEA7F84" name="ceiling" typeRef="number"/>
               <dmn:literalExpression id="_337BA040-E1E9-41A3-9C97-0A5C256CC995">
-                <dmn:text>ceiling(-1.5)</dmn:text>
+                <dmn:text>ceiling(-n1/n2)</dmn:text>
               </dmn:literalExpression>
             </dmn:contextEntry>
             <dmn:contextEntry>
@@ -99,13 +99,13 @@
             <dmn:contextEntry>
               <dmn:variable id="_6A0653A7-AD0D-46B1-A6B3-2B2AE1E922AC" name="oddnumber" typeRef="number"/>
               <dmn:literalExpression id="_225C24D9-1966-43B4-B8AA-81496377FEF0">
-                <dmn:text>odd(5)</dmn:text>
+                <dmn:text>odd(n1)</dmn:text>
               </dmn:literalExpression>
             </dmn:contextEntry>
             <dmn:contextEntry>
               <dmn:variable id="_486CC194-CFFF-4634-A69C-060EA5559CCE" name="evennumber" typeRef="number"/>
               <dmn:literalExpression id="_6B1B9BB5-CD04-4029-B1E0-925927ECA686">
-                <dmn:text>even(6)</dmn:text>
+                <dmn:text>even(n1)</dmn:text>
               </dmn:literalExpression>
             </dmn:contextEntry>
             <dmn:contextEntry>
@@ -141,52 +141,52 @@
           <kie:ComponentWidths dmnElementRef="_C6B40AB0-0008-4E92-8E89-B8DB0BBDDFAA">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>310</kie:width>
+            <kie:width>560</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_010B7A81-59E2-4ED6-8331-4C807B339199">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_A6D90172-04B3-49B8-B8F1-54A419F35D74">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_B8E2C33B-6A01-4819-9F0A-CAE1A07FB0E1">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_7F376772-AD37-4A39-A78C-FAACC59033AA">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_5C0C6475-6ED6-4587-B0BA-87BDAD4ADF92">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_B2C4839C-5ED6-421D-8A3F-3F0156AF1882">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_523245DC-9C97-4371-B936-A7063CD04895">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_337BA040-E1E9-41A3-9C97-0A5C256CC995">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_E0FA0DF9-762B-4F0A-9EC6-DD5056691CCC">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_225C24D9-1966-43B4-B8AA-81496377FEF0">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_6B1B9BB5-CD04-4029-B1E0-925927ECA686">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_183C13E3-DE9C-4640-8D3C-51524325976E">
-            <kie:width>140</kie:width>
+            <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_114F268B-152E-44D0-B4AA-391ABD4D7ADC">
-            <kie:width>310</kie:width>
+            <kie:width>560</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_234C4070-E309-4EC9-899F-5DDED6BD5C0F">
             <kie:width>50</kie:width>
-            <kie:width>480</kie:width>
+            <kie:width>730</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>

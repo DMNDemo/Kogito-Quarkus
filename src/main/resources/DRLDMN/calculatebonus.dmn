@@ -19,7 +19,7 @@
     </dmn:knowledgeRequirement>
     <dmn:context id="_F107DCF9-BBF4-4E5C-A2DF-06D1A9FE6629">
       <dmn:contextEntry>
-        <dmn:variable id="_8F82BD91-3681-4182-A6AB-9B6CAF644A75" name="bonus applied"/>
+        <dmn:variable id="_8F82BD91-3681-4182-A6AB-9B6CAF644A75" name="bonus applied" typeRef="number"/>
         <dmn:literalExpression id="_2EF12D9F-BACC-4A55-83D9-448C7FADE72F">
           <dmn:text>for a product in products return bonus(a product)</dmn:text>
         </dmn:literalExpression>
@@ -124,7 +124,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="602" y="150" width="100" height="50"/>
+        <dc:Bounds x="571" y="142" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_B614EAF8-7C49-4D24-9391-B92C1341485F" dmnElementRef="_B614EAF8-7C49-4D24-9391-B92C1341485F">
@@ -132,7 +132,7 @@
         <di:waypoint x="407" y="192"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_1DD95959-8B8A-4B5E-84A4-EBCAAEA18E39" dmnElementRef="_1DD95959-8B8A-4B5E-84A4-EBCAAEA18E39">
-        <di:waypoint x="652" y="175"/>
+        <di:waypoint x="621" y="167"/>
         <di:waypoint x="457" y="167"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
