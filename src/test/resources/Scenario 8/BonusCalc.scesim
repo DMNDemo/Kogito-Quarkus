@@ -265,7 +265,7 @@
     </scesimData>
   </background>
   <settings>
-    <dmnFilePath>src/main/resources/Scenario 8/calculatebonus.dmn</dmnFilePath>
+    <dmnFilePath>src/main/resources/DRLDMN/calculatebonus.dmn</dmnFilePath>
     <type>DMN</type>
     <dmnNamespace>https://kiegroup.org/dmn/_0F81D298-D1DC-46B4-B332-50381068F737</dmnNamespace>
     <dmnName>calculatebonus</dmnName>

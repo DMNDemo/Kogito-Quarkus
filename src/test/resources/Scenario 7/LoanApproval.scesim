@@ -258,7 +258,7 @@
     </scesimData>
   </background>
   <settings>
-    <dmnFilePath>src/main/resources/Scenario 7/loanApproval.dmn</dmnFilePath>
+    <dmnFilePath>src/main/resources/DRLDMN/DMN DT Example.dmn</dmnFilePath>
     <type>DMN</type>
     <dmnNamespace>https://kiegroup.org/dmn/_88D71037-BEE1-45E6-AD3D-42F11E5934B4</dmnNamespace>
     <dmnName>loanApproval</dmnName>

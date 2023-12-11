@@ -263,7 +263,7 @@
     </scesimData>
   </background>
   <settings>
-    <dmnFilePath>src/main/resources/Scenario 9/ageClassification.dmn</dmnFilePath>
+    <dmnFilePath>src/main/resources/DRLDMN/ageClassification.dmn</dmnFilePath>
     <type>DMN</type>
     <dmnNamespace>https://kiegroup.org/dmn/_E8ECA5BC-44A6-4220-B393-8FEAB8DCCC45</dmnNamespace>
     <dmnName>ageClassification</dmnName>
