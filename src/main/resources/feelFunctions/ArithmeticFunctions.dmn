@@ -109,6 +109,24 @@
               </dmn:literalExpression>
             </dmn:contextEntry>
             <dmn:contextEntry>
+              <dmn:variable id="_5C5D951E-E96A-48FE-9C82-5370521F9446" name="modulo" typeRef="number"/>
+              <dmn:literalExpression id="_B8E6DA0B-EB32-42E9-A4B1-F5A1DDDED56D">
+                <dmn:text>modulo(n1,n2 )</dmn:text>
+              </dmn:literalExpression>
+            </dmn:contextEntry>
+            <dmn:contextEntry>
+              <dmn:variable id="_C761DEDA-C527-483B-95EE-15A7A9C92519" name="before" typeRef="number"/>
+              <dmn:literalExpression id="_FB28421F-90B9-414F-849F-E7D80859AFC3">
+                <dmn:text>before(n1,n2 )</dmn:text>
+              </dmn:literalExpression>
+            </dmn:contextEntry>
+            <dmn:contextEntry>
+              <dmn:variable id="_D3EDE555-1774-4673-BABC-4E3C998192DD" name="after" typeRef="number"/>
+              <dmn:literalExpression id="_A95F0415-70BA-4B02-A53D-98FFAA45EB9D">
+                <dmn:text>after(n1,n2)</dmn:text>
+              </dmn:literalExpression>
+            </dmn:contextEntry>
+            <dmn:contextEntry>
               <dmn:literalExpression id="_183C13E3-DE9C-4640-8D3C-51524325976E">
                 <dmn:text>[sum,subtract,multiply,division,decimal,floor,ceiling,abs,oddnumber,evennumber]</dmn:text>
               </dmn:literalExpression>
@@ -176,6 +194,15 @@
             <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_6B1B9BB5-CD04-4029-B1E0-925927ECA686">
+            <kie:width>390</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_B8E6DA0B-EB32-42E9-A4B1-F5A1DDDED56D">
+            <kie:width>390</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_FB28421F-90B9-414F-849F-E7D80859AFC3">
+            <kie:width>390</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A95F0415-70BA-4B02-A53D-98FFAA45EB9D">
             <kie:width>390</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_183C13E3-DE9C-4640-8D3C-51524325976E">

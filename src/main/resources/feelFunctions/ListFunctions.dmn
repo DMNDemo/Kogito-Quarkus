@@ -61,6 +61,18 @@
         </dmn:literalExpression>
       </dmn:contextEntry>
       <dmn:contextEntry>
+        <dmn:variable id="_11A0DCC7-6CE7-4745-94EB-DD0B4F3FC8C4" name="reverse" typeRef="resultList"/>
+        <dmn:literalExpression id="_A4C15BC2-7D8E-4799-93AE-46FD5ED37B8C">
+          <dmn:text>reverse(Salaries)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_C65D4C40-62DA-4B31-9368-A1B4453ED40D" name="flatten" typeRef="resultList"/>
+        <dmn:literalExpression id="_8ADFAB3D-3354-444A-A0A6-BB2621C204FD">
+          <dmn:text>flatten(Salaries,[12,13],[1,2])</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
         <dmn:literalExpression id="_A2F78C9B-2D43-4CAE-8ABA-5641C8C58F3C">
           <dmn:text/>
         </dmn:literalExpression>
@@ -96,6 +108,12 @@
             <kie:width>540</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_87626F94-A907-4210-9103-A4A7B79CEF56">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A4C15BC2-7D8E-4799-93AE-46FD5ED37B8C">
+            <kie:width>540</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_8ADFAB3D-3354-444A-A0A6-BB2621C204FD">
             <kie:width>540</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_A2F78C9B-2D43-4CAE-8ABA-5641C8C58F3C">
