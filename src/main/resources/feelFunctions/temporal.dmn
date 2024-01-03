@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_BC781ADE-F541-477F-B69F-ED6394C91CDE" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_179F8CDD-2E5E-4993-A649-6BD29677379E" name="temporal" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_BC781ADE-F541-477F-B69F-ED6394C91CDE">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_E7409708-E9F3-4EA4-ADF4-716E36128F5E" name="list" isCollection="true">
+    <dmn:typeRef>Any</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_67BC2DED-77C9-46CC-B8EB-8C89EB6E2D44" name="date">
+    <dmn:extensionElements/>
+    <dmn:variable id="_A40A13DE-270E-4B1E-A666-654F78AE9584" name="date" typeRef="date"/>
+  </dmn:inputData>
+  <dmn:decision id="_384DF4F2-3704-49C9-9431-F60A246A5848" name="Decision">
+    <dmn:extensionElements/>
+    <dmn:variable id="_3DD0A027-12A5-4414-9449-F1776EAC3A2D" name="Decision" typeRef="list"/>
+    <dmn:informationRequirement id="_EA0ADD12-A830-4E3D-BC55-782B5286A267">
+      <dmn:requiredInput href="#_67BC2DED-77C9-46CC-B8EB-8C89EB6E2D44"/>
+    </dmn:informationRequirement>
+    <dmn:context id="_7E24327E-6E35-46B2-A19C-FD50E879F178">
+      <dmn:contextEntry>
+        <dmn:variable id="_ACAB541D-E2DB-41B2-A58F-6DC893DFA316" name="dayNumber" typeRef="number"/>
+        <dmn:literalExpression id="_2BE04532-E7CC-41EC-96F9-4F1D1360E1AA">
+          <dmn:text>day of year(date)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_AD8132F6-2088-4CCD-B5AA-5836100EAF9B" name="dateWeek" typeRef="string"/>
+        <dmn:literalExpression id="_6B403D0E-6AC4-4313-8171-BFE491E1FDF4">
+          <dmn:text>day of week(date)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_2186B870-5F9F-4F65-BCBD-F20F4FF8C9FD" name="monthYear" typeRef="string"/>
+        <dmn:literalExpression id="_12E7F4A5-A7BE-4E87-84C8-ADD2E06A5853">
+          <dmn:text>month of year(date)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_22BFE5B8-4E61-470C-9E4A-61E183EB4A7A" name="weekYear" typeRef="number"/>
+        <dmn:literalExpression id="_6C3775FC-1247-41AF-97D7-2369172CF9E4">
+          <dmn:text>week of year(date)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:literalExpression id="_73DF3535-4F34-4A9E-BB26-4BACDD914D69">
+          <dmn:text>[dayNumber,dateWeek,monthYear,weekYear]</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_D3984121-FBC5-4A37-890E-6137914B5182" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_7E24327E-6E35-46B2-A19C-FD50E879F178">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2BE04532-E7CC-41EC-96F9-4F1D1360E1AA">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_6B403D0E-6AC4-4313-8171-BFE491E1FDF4">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_12E7F4A5-A7BE-4E87-84C8-ADD2E06A5853">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_6C3775FC-1247-41AF-97D7-2369172CF9E4">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_73DF3535-4F34-4A9E-BB26-4BACDD914D69">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_67BC2DED-77C9-46CC-B8EB-8C89EB6E2D44" dmnElementRef="_67BC2DED-77C9-46CC-B8EB-8C89EB6E2D44" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="322" y="288" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_384DF4F2-3704-49C9-9431-F60A246A5848" dmnElementRef="_384DF4F2-3704-49C9-9431-F60A246A5848" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="322" y="142" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_EA0ADD12-A830-4E3D-BC55-782B5286A267" dmnElementRef="_EA0ADD12-A830-4E3D-BC55-782B5286A267">
+        <di:waypoint x="372" y="313"/>
+        <di:waypoint x="372" y="167"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
