@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_dfxlAJZzEDyqb5EUT_KSNg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_ageItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_ageofServiceItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_totalVacationDaysItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_baseVacationDaysItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_extradayscase1Item" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_extradayscase2Item" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_extradayscase3Item" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_fileNameInputXItem" structureRef="java.lang.String"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_namespaceInputXItem" structureRef="java.lang.String"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_modelInputXItem" structureRef="java.lang.String"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_decisionInputXItem" structureRef="java.lang.String"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeInputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeofServiceInputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_TotalVacationDaysOutputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_BaseVacationDaysOutputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase1OutputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase2OutputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase3OutputXItem" structureRef="Integer"/>
+  <bpmn2:collaboration id="_5117AB73-D6A2-42D7-AEC7-18ABA7676202" name="Default Collaboration">
+    <bpmn2:participant id="_BEE3893E-D840-4AFF-A5B3-C4E95F169577" name="Pool Participant" processRef="Vacation"/>
+  </bpmn2:collaboration>
+  <bpmn2:process id="Vacation" drools:packageName="com.example" drools:version="1.0" drools:adHoc="false" name="Vacation" isExecutable="true" processType="Public">
+    <bpmn2:property id="age" itemSubjectRef="_ageItem" name="age">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[input]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="ageofService" itemSubjectRef="_ageofServiceItem" name="ageofService">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[input]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="totalVacationDays" itemSubjectRef="_totalVacationDaysItem" name="totalVacationDays">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="baseVacationDays" itemSubjectRef="_baseVacationDaysItem" name="baseVacationDays">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="extradayscase1" itemSubjectRef="_extradayscase1Item" name="extradayscase1">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="extradayscase2" itemSubjectRef="_extradayscase2Item" name="extradayscase2">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="extradayscase3" itemSubjectRef="_extradayscase3Item" name="extradayscase3">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:sequenceFlow id="_9D462D59-F7A0-493E-8B4F-CB588F94FFC6" sourceRef="_8D2D876E-3178-4308-A0A5-5BD1779B6F94" targetRef="_75C0F2A6-A90B-4C8E-A782-B8AAA4978DC2"/>
+    <bpmn2:sequenceFlow id="_D41A4662-E793-4371-A0DA-BCF26445BD2D" sourceRef="_10BD008D-5902-461C-A6BC-C1B9F8AA95E8" targetRef="_8D2D876E-3178-4308-A0A5-5BD1779B6F94">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:endEvent id="_75C0F2A6-A90B-4C8E-A782-B8AAA4978DC2">
+      <bpmn2:incoming>_9D462D59-F7A0-493E-8B4F-CB588F94FFC6</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:businessRuleTask id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94" name="TotalVacationDays" implementation="http://www.jboss.org/drools/dmn">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[TotalVacationDays]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_D41A4662-E793-4371-A0DA-BCF26445BD2D</bpmn2:incoming>
+      <bpmn2:outgoing>_9D462D59-F7A0-493E-8B4F-CB588F94FFC6</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_namespaceInputX" drools:dtype="java.lang.String" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_namespaceInputXItem" name="namespace"/>
+        <bpmn2:dataInput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_modelInputX" drools:dtype="java.lang.String" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_modelInputXItem" name="model"/>
+        <bpmn2:dataInput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeInputX" drools:dtype="Integer" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeInputXItem" name="Age"/>
+        <bpmn2:dataInput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeofServiceInputX" drools:dtype="Integer" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeofServiceInputXItem" name="AgeofService"/>
+        <bpmn2:dataOutput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_TotalVacationDaysOutputX" drools:dtype="Integer" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_TotalVacationDaysOutputXItem" name="TotalVacationDays"/>
+        <bpmn2:dataOutput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_BaseVacationDaysOutputX" drools:dtype="Integer" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_BaseVacationDaysOutputXItem" name="BaseVacationDays"/>
+        <bpmn2:dataOutput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase1OutputX" drools:dtype="Integer" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase1OutputXItem" name="Extradayscase1"/>
+        <bpmn2:dataOutput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase2OutputX" drools:dtype="Integer" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase2OutputXItem" name="Extradayscase2"/>
+        <bpmn2:dataOutput id="_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase3OutputX" drools:dtype="Integer" itemSubjectRef="__8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase3OutputXItem" name="Extradayscase3"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_namespaceInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_modelInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeofServiceInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_TotalVacationDaysOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_BaseVacationDaysOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase1OutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase2OutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase3OutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_namespaceInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[https://kiegroup.org/dmn/_89C5917C-AAC0-48B4-BFF5-C1053BF5309D]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_8D2D876E-3178-4308-A0A5-5BD1779B6F94_namespaceInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_modelInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[vacation]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_8D2D876E-3178-4308-A0A5-5BD1779B6F94_modelInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>age</bpmn2:sourceRef>
+        <bpmn2:targetRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>ageofService</bpmn2:sourceRef>
+        <bpmn2:targetRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_AgeofServiceInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_TotalVacationDaysOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>totalVacationDays</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_BaseVacationDaysOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>baseVacationDays</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase1OutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>extradayscase1</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase2OutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>extradayscase2</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_8D2D876E-3178-4308-A0A5-5BD1779B6F94_Extradayscase3OutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>extradayscase3</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:businessRuleTask>
+    <bpmn2:startEvent id="_10BD008D-5902-461C-A6BC-C1B9F8AA95E8">
+      <bpmn2:outgoing>_D41A4662-E793-4371-A0DA-BCF26445BD2D</bpmn2:outgoing>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="Vacation">
+      <bpmndi:BPMNShape id="shape__10BD008D-5902-461C-A6BC-C1B9F8AA95E8" bpmnElement="_10BD008D-5902-461C-A6BC-C1B9F8AA95E8">
+        <dc:Bounds height="56" width="56" x="210" y="204"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__8D2D876E-3178-4308-A0A5-5BD1779B6F94" bpmnElement="_8D2D876E-3178-4308-A0A5-5BD1779B6F94">
+        <dc:Bounds height="102" width="154" x="388" y="181"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__75C0F2A6-A90B-4C8E-A782-B8AAA4978DC2" bpmnElement="_75C0F2A6-A90B-4C8E-A782-B8AAA4978DC2">
+        <dc:Bounds height="56" width="56" x="622" y="204"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__10BD008D-5902-461C-A6BC-C1B9F8AA95E8_to_shape__8D2D876E-3178-4308-A0A5-5BD1779B6F94" bpmnElement="_D41A4662-E793-4371-A0DA-BCF26445BD2D">
+        <di:waypoint x="238" y="232"/>
+        <di:waypoint x="388" y="232"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__8D2D876E-3178-4308-A0A5-5BD1779B6F94_to_shape__75C0F2A6-A90B-4C8E-A782-B8AAA4978DC2" bpmnElement="_9D462D59-F7A0-493E-8B4F-CB588F94FFC6">
+        <di:waypoint x="465" y="232"/>
+        <di:waypoint x="650" y="232"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters/>
+          <bpsim:ElementParameters elementRef="_10BD008D-5902-461C-A6BC-C1B9F8AA95E8">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_8D2D876E-3178-4308-A0A5-5BD1779B6F94">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_dfxlAJZzEDyqb5EUT_KSNg</bpmn2:source>
+    <bpmn2:target>_dfxlAJZzEDyqb5EUT_KSNg</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
